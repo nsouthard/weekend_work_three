@@ -5,27 +5,21 @@
 
 
 def sum_of_range(array)
-  p array[]
-  range = []
-  range << array
-  count = array.max(1)
-  number = array.max(1)
+  sum = 0
 
-  number.each do |num|
-    count -= 1
-    range << num
+  if array[1] > array[0]
+    (array[0]..array[1]).each do |num|
+      sum += num
+    end
+  else
+    (array[1]..array[0]).each do |num|
+      sum += num
+    end
   end
+
+  sum
 end
   
-
-
-  # result = 0
-  # range_array = []
-  # range_array << array
-  # array.each do |element|
-  #   result += element
-  # end
-
 
 
 # Driver code - don't touch anything below this line.
